@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Artists</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="artists.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100vh;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+
+
+
+/*    .navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}*/
+
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+  </style>
+</head>
+<body style="overflow-y: hidden;">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="mainpage.html">Home</a></li>
+        
+      </ul>
+
+      <!-- <ul class="nav navbar-nav navbar-center">
+        <li class="active">
+          <form action="/action_page.php">
+            <input type="text" placeholder="Search.." name="search" id="searchfield">
+            <button id="search" type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </li>
+        
+      </ul> -->
+
+      <ul class="nav navbar-nav navbar-right">
+        <!-- <li><a href="#"><span id="menuuser" class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
+        <li>
+        	<!-- <div class="btn-group"> -->
+	      		<button type="button" id="menuuser" class="btn btn-primary dropdown-toggle btn-lg" data-toggle="dropdown" style="background-color: black;"> <span class="caret"></span></button>
+	      		<ul class="dropdown-menu" role="menu">
+		        	<li><a href="#">Account Details</a></li>
+		        	<li><a href="signin.html">Logout</a></li>
+	      		</ul>
+    		<!-- </div> -->
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="col-sm-2 sidenav" style="background-color: black;">
+      
+      <p><button type="button" class="btn btn-info" style="background-color: black;" id="yourmusic">Your Music</button></p>
+      <p>
+        
+      
+      
+      <button type="button" class="btn btn-info" style="background-color: black;" id="searchbt">
+      <span class="glyphicon glyphicon-search"></span> Search
+    </button>
+  
+      </p>
+
+</div>
+  
+<div class="container-fluid text-center col-sm-10" style="height: 100vh; overflow-y: scroll;">    
+  <div class="row content">
+    
+    <h1 id="artistheading"></h1>
+    <hr>
+    <div class="col-sm-12 text-left" id="albums">
+
+      <h1>Albums</h1>
+      <hr>
+      
+    </div>
+    <hr>
+
+  </div>
+
+
+  <div class="navbar navbar-default navbar-fixed-bottom col-sm-offset-2 col-sm-10" id="playerc">
+    <div class="container">
+      <div id="player">
+
+      </div>
+    </div>
+
+
+  </div>
+</div>
+</div>
+
+</body>
+</html>
